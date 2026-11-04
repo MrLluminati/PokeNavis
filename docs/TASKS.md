@@ -14,8 +14,8 @@ A proposed task is not authorization to implement undefined product decisions. C
 
 | ID | Task | Priority | Status | Owner / next actor | Dependencies |
 | --- | --- | --- | --- | --- | --- |
-| PN-001 | Bootstrap runnable Godot client project | P0 | **In review** | Project owner: review [PR #1](https://github.com/MrLluminati/PokeNavis/pull/1) | Owner review and merge |
-| PN-002 | Tilemap test zone, movement and collision | P0 | Backlog | Codex after PN-001 | PN-001 |
+| PN-001 | Bootstrap runnable Godot client project | P0 | **Done** | Merged [PR #1](https://github.com/MrLluminati/PokeNavis/pull/1) on 2026-11-04 | None |
+| PN-002 | [First 2D test world, movement and collision](PN-002-SPEC.md) | P0 | **Ready** | Codex → [Issue #2](https://github.com/MrLluminati/PokeNavis/issues/2) | None; start from `main` |
 | PN-003 | NPC interaction and minimal dialogue | P0 | Backlog | Codex after PN-002 | PN-002 |
 | PN-004 | Pure battle state/action/event schema | P0 | Backlog | ChatGPT specification + owner approval; Codex implementation | Battle rule scope |
 | PN-005 | Deterministic battle core with tests | P0 | Backlog | Codex | PN-004 |
@@ -25,9 +25,9 @@ A proposed task is not authorization to implement undefined product decisions. C
 | PN-009 | Local versioned save/load | P1 | Backlog | Codex | PN-008 |
 | PN-010 | Automated checks/CI for runnable components | P1 | Backlog | Codex | PN-001 and/or PN-005 |
 
-These are **proposed sequence tasks**, not evidence that implementation has begun. The objective is Phase 1 offline vertical slice, not full MMORPG.
+The sequence above is the approved **Phase 1 offline vertical slice** backlog. PN-001 is complete; PN-002 is ready for Codex, **not yet started**. Later tasks remain Backlog until approved and prepared.
 
-## Codex verification handoff: PN-001 (PR #1)
+## Completed handoff: PN-001 (merged PR #1)
 
 **Objective:** Create the smallest reproducible, runnable Godot 4.x 2D project in `client/` with a minimal test scene. Do not implement player movement, battles, networking, Pokémon content or an asset pipeline yet.
 
@@ -46,13 +46,14 @@ These are **proposed sequence tasks**, not evidence that implementation has begu
 - No unlicensed Pokémon assets, ROM content, secrets or unrelated game features are added.
 - `docs/TASKS.md` and `docs/STATUS.md` reflect actual progress and contain PR/commit links.
 
-**Reviewer handoff:** Review PR #1 and its [client verification record](../client/README.md). The editor F5 check passed. Merge only after owner approval. PN-002 remains Backlog.
+**Completion evidence:** [PR #1](https://github.com/MrLluminati/PokeNavis/pull/1) merged 2026-11-04 after owner F5 verification, and [client verification record](../client/README.md) documents passing Godot import, headless start and graphical rendering. Do not reopen this task without a regression.
 
 ## Follow-up tasks (outline)
 
-**PN-002 — Test zone**
-- An original or simple placeholder test map, movement, collision and one map boundary.
-- Acceptance: player can move in four directions, collides with walls and does not leave map bounds.
+**PN-002 — First test world (Ready)**
+- [Full specification and acceptance tests](PN-002-SPEC.md) · [GitHub Issue #2](https://github.com/MrLluminati/PokeNavis/issues/2).
+- Two original placeholder zones, WASD/arrow movement, collisions, Camera2D, and safe two-way map transitions.
+- **Next actor:** Codex creates `feature/PN-002-world-movement` from current `main`. Start implementation only in that branch; status changes to In progress when work actually begins.
 
 **PN-003 — NPC interaction**
 - One placeholder NPC with reusable dialogue data.
