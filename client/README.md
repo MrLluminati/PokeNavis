@@ -1,61 +1,74 @@
 # PokeNavis Godot Client
 
-**Status:** PN-001 starter scene verified with Godot 4.7.2; awaiting PR review. This is not a playable RPG yet.
+**Status:** PN-002 first walkable test world is implemented on a feature branch and awaiting review. This is an offline prototype, not a playable RPG.
 
-## Required environment
+## Requirements and launch
 
-- **Godot 4.7.2 stable, standard edition** (not the .NET/C# edition): https://godotengine.org/download/archive/4.7.2-stable/
-- **Scripting:** GDScript.
-- **Renderer:** GL Compatibility for this small 2D prototype.
-- No third-party plugins, extracted Pokémon assets or separate packages.
+- Godot **4.7.2 stable, standard edition** (GDScript; no .NET SDK): https://godotengine.org/download/archive/4.7.2-stable/
+- GL Compatibility renderer; no third-party plugins or proprietary assets.
+- Open `client/project.godot` in the editor and press **F5**. The project starts in **Test Village**. Press **F6** with `scenes/main.tscn` open to inspect the preserved PN-001 splash screen.
 
-## Editor launch (Windows or other desktop OS)
+## Controls and navigation
 
-1. Download the **Godot 4.7.2 standard** executable.
-2. Launch Godot; use Project Manager **Import** to select `PokeNavis/client/project.godot`.
-3. Open the project and press **F5** (Run Project).
-4. Expect a dark 960×540 startup window showing "PokeNavis", "2D Multiplayer RPG - Prototype", and `PN-001 | Godot 4.7.2 + GDScript`.
-5. Confirm the Output panel contains `PokeNavis PN-001: startup scene ready` without script/resource errors.
+| Input | Result |
+| --- | --- |
+| W / Up arrow | Move up |
+| A / Left arrow | Move left |
+| S / Down arrow | Move down |
+| D / Right arrow | Move right |
 
-## Headless smoke tests (from repository root)
+Movement is 96 pixels per second while a key is held and stops when released. If horizontal and vertical keys are held together, horizontal input takes priority; the player never moves diagonally faster. The camera follows the player and stays within each 1280×896 map. Solid blue-gray blocks and the outer border stop movement.
 
-If the Godot executable is on PATH as `godot`:
+From the Village starting point, walk **east** along the tan path to the cyan exit. You arrive safely on the west side of **Test Route**. Walk **west** along its path to the cyan return exit; you arrive near the east side of Village. Relaunch starts at the original Village spawn. No progress is saved.
+
+The zones use original colored geometry on a 32×32 design grid, with grid-aligned Godot collision shapes. They do not use `TileMapLayer` yet; this keeps the small prototype editable through the shared `scripts/world.gd` layout. The player is one reusable `CharacterBody2D` scene, and the transition trigger is an `Area2D` in each zone. These are temporary engineering defaults, not final art or balance decisions.
+
+## Source layout
+
+```text
+client/
+  project.godot                 Main scene and WASD/arrow input actions
+  scenes/main.tscn              Preserved PN-001 splash scene
+  scenes/player.tscn            Reusable player, collision and camera
+  scenes/world/test_village.tscn
+  scenes/world/test_route.tscn
+  scripts/player.gd             Cardinal movement in physics updates
+  scripts/world.gd              Placeholder maps, blockers and exits
+  tests/world_smoke.gd          Focused movement and transition checks
+```
+
+Godot-generated `.godot/` cache files are ignored. Generated `.gd.uid` files are tracked with the scripts.
+
+## Reproduce verification
+
+From the repository root, with Godot 4.7.2 standard on `PATH` as `godot` (or replace it with the executable's full path):
 
 ```bash
 godot --version
 godot --headless --path client --import
-godot --headless --path client --quit-after 5
+godot --headless --path client --quit-after 30
+godot --headless --path client --script res://tests/world_smoke.gd
 ```
 
-The first command should report 4.7.2 stable. The next two import and launch the minimal startup scene without a window. The last command should print the PN-001 startup message.
+In the editor, press F5 and confirm the Village scene displays at 960×540 with no errors. Move with WASD and arrows, try simultaneous horizontal and vertical input, collide with solid blocks and the map edge, and walk through the cyan exits in both directions. Stop and press F5 again to verify the original Village spawn.
 
-On Windows, replace `godot` with the full executable path if it is not in PATH. The launch steps do not require C#/.NET tooling.
+## Actual verification on 2026-11-04
 
-## Verification (2026-11-04)
+Windows x86_64; official Godot standard executable `Godot_v4.7.2-stable_win64_console.exe`, version `4.7.2.stable.official.ed1daf0bf`:
 
-Windows x86_64, official Godot 4.7.2 stable **standard** build (`4.7.2.stable.official.ed1daf0bf`):
-
-| Command from repository root | Result |
+| Check | Observed result |
 | --- | --- |
-| `Godot_v4.7.2-stable_win64_console.exe --version` | Passed; printed `4.7.2.stable.official.ed1daf0bf` |
-| `Godot_v4.7.2-stable_win64_console.exe --headless --path client --import` | Passed; exit code 0, import and editor initialization completed without errors |
-| `Godot_v4.7.2-stable_win64_console.exe --headless --path client --quit-after 5` | Passed; exit code 0, printed `PokeNavis PN-001: startup scene ready` |
-| `Godot_v4.7.2-stable_win64_console.exe --path client --write-movie <temporary-output>.png --quit-after 5` | Passed; exit code 0, GL Compatibility rendered five 960×540 frames. The inspected frame displayed the expected title, subtitle and status text; output contained the startup message without errors. |
-| Godot editor: open `client/project.godot`, press F5 | Passed; the running scene displayed the expected title, subtitle and status, and the Output panel printed `PokeNavis PN-001: startup scene ready` with zero errors. |
+| `--version` | Exit 0; printed `4.7.2.stable.official.ed1daf0bf` |
+| `--headless --path client --import` | Exit 0; import completed without errors |
+| `--headless --path client --quit-after 30` | Exit 0; no script or resource errors |
+| `--headless --path client --script res://tests/world_smoke.gd` | Exit 0; all 32 checks passed, including key mappings, movement, camera limits/follow, blockers/edges, two-way exits, safe arrivals and relaunch |
+| Editor F5 | Village displayed in the 960×540 debug window; the editor Output panel showed zero errors and zero warnings |
+| Graphical capture of Village and Route | Both commands exited 0; GL Compatibility rendered 960×540 frames. Inspected frames are in [`docs/screenshots`](../docs/screenshots/). |
 
-The graphical scene was launched from the command line and its rendered frame inspected. The editor F5 workflow was also verified. Generated `.godot/` files remain ignored. The generated `scripts/main.gd.uid` is committed as source metadata.
+The movement and transition checks above were driven by the development test in a physics session. The graphical F5 check established launch and appearance; a continuous manual keyboard traversal was not recorded. The test and editor checks together cover the specified behavior. See [PN-002 specification](../docs/PN-002-SPEC.md) and [Issue #2](https://github.com/MrLluminati/PokeNavis/issues/2).
 
-## Files
+![Test Village startup](../docs/screenshots/pn-002-test-village.png)
 
-```text
-client/
-  project.godot
-  scenes/main.tscn
-  scripts/main.gd
-  scripts/main.gd.uid
-  README.md
-```
+![Test Route opened directly](../docs/screenshots/pn-002-test-route.png)
 
-**Scope boundary:** No movement, tilemaps, encounters, battles, networking or external Pokémon assets are part of PN-001.
-
-**Next:** Project owner reviews PN-001 in PR #1. PN-002 (test-zone movement and collision) remains outside this task.
+**Scope:** No NPC dialogue, encounters, battles, inventory, save system, networking or Pokémon-owned assets were added.
