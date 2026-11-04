@@ -11,12 +11,14 @@ PokeMMO and Pokémon games may be studied as **design references** for the indep
 
 ## Allowed/reference-first workflow
 
-1. The project owner runs the reference game in the ordinary supported manner, with files they are authorized to use.
-2. Observe and document **visible behavior**: input, UI flow, timings, state transitions, feedback, error states and player-facing rules.
-3. Write **original, high-level notes** or a feature comparison, recording the source and date. Reference gameplay footage or screenshots by links/brief descriptions only when authorized.
-4. Identify improvements or desired independent behavior, and separate **observations** from **product decisions**.
-5. Add proposed behavior to a task or design document for project-owner approval.
-6. Codex implements independent code with original assets and data; tests validate PokeNavis requirements rather than attempting binary equivalence with protected games.
+1. The project owner identifies the **local PokeMMO installation folder** and, separately, any reference-material folder they are comfortable sharing. No installation path or file content is presumed to be available to Codex unless the user grants access.
+2. **Read-only file survey:** Codex may list file names, folder layout, extensions and sizes to identify user-facing settings, logs, screenshots, supported mod/theme locations and relevant documentation. Reading an ordinary configuration, text log or freely licensed mod's public instructions is permitted **only when lawful, terms-compliant, necessary for the research and free of user secrets**. Redact account names, tokens, login information and private data from any shared notes.
+3. **Do not treat a ROM or proprietary executable as ordinary documentation.** Do not unpack, disassemble, decompile, decrypt, circumvent protections, dump internal data, inspect runtime memory, intercept network traffic or reverse-engineer PokeMMO clients, servers or proprietary ROM contents. File metadata alone does not authorize studying protected internals.
+4. The project owner runs the game **normally and manually** using files they are authorized to use. Codex can analyze supplied screen recordings/screenshots or the owner's descriptions; it should **not bot, macro, script or automate PokeMMO gameplay**.
+5. Observe and document **visible behavior**: input, UI flow, timings, state transitions, feedback, error states and player-facing rules. Note uncertain inferences as hypotheses, not verified implementation details.
+6. Write **original, high-level notes** or a feature comparison, recording the source and date. Reference gameplay footage or screenshots by links/brief descriptions only when authorized. Keep protected material out of the PokeNavis repository.
+7. Identify improvements, implementation options and independently defined desired behavior. Separate **observations** from **engineering hypotheses** and **owner-approved PokeNavis decisions**.
+8. Add the proposed behavior and trade-offs to a task or design document for project-owner approval. Only then should Codex implement independent code with original assets and data, tested against PokeNavis requirements rather than copying internal implementations.
 
 ## Do not do in the development repository
 
@@ -29,6 +31,20 @@ PokeMMO and Pokémon games may be studied as **design references** for the indep
 ### Separate engine/code from creative content
 
 A general design pattern (e.g., a top-down camera or turn-based actions) can inform a new independent implementation. The exact creative expression, source implementation and assets are a separate rights question. Review license terms of any proposed compatible open-source engine before adoption.
+
+## Required deliverable: engineering research report
+
+Write a reviewable Markdown report under `docs/research/` (e.g., `pokemmo-feature-analysis.md`) with these sections:
+
+1. **Scope and provenance:** installation directories inspected (path may be redacted), observations provided by the owner, dates and versions, what could *not* be accessed, and permission/terms boundaries.
+2. **Local file inventory (metadata only):** relevant categories such as settings, supported customizations, logs and nonproprietary documentation; exclude account IDs, secrets, ROM content, binary dumps, file hashes intended to identify proprietary assets and raw third-party code.
+3. **Feature-by-feature behavior:** input → visible state transition → feedback → edge cases; include separately flagged observations and unverified inferences.
+4. **PokeNavis architecture mapping:** suggest original modules/classes/contracts, scene graphs, event flow and data models for each relevant feature; describe why the design would be more maintainable, testable, secure or accessible.
+5. **Comparative improvement matrix:** what to retain as a general interaction idea, what to simplify, what to redesign, and what new feature to add.
+6. **Incremental implementation plan:** dependencies and milestones, prioritizing PN-004's battle state/action/event schema without silently deciding unresolved battle mechanics.
+7. **Open questions and risk register:** decisions requiring the owner's approval; feasibility and technical uncertainties.
+
+**This is a research-only deliverable.** Do not edit gameplay code or advance PN-004 status based on observations alone. Prefer concise representative screenshots in an owner-controlled location over committing third-party game images to the public repository.
 
 ## Comparison worksheet (fill with observations, not extracted data)
 
@@ -44,7 +60,7 @@ A general design pattern (e.g., a top-down camera or turn-based actions) can inf
 
 ## Codex handoff prompt
 
-> Read AGENTS.md and docs/REFERENCE-RESEARCH.md. Perform **reference-oriented comparative analysis only** using the owner's lawfully captured gameplay notes, UI descriptions or permitted screenshots/recordings. Do not inspect, extract or reverse-engineer ROMs or the PokeMMO client. Write a factual observation matrix, then propose **original PokeNavis requirements** with tradeoffs and questions for approval. Do not introduce assets, source code or mechanics into gameplay without an approved task.
+> Read AGENTS.md and docs/REFERENCE-RESEARCH.md. I will give you the local PokeMMO installation path and optional screenshots/gameplay recordings. **Read-only inventory** the installation's file names, directory structure and relevant nonsecret, accessible configuration or supported customization documentation. Do not reverse-engineer client binaries or ROMs, extract proprietary assets, automate game inputs or access memory/network internals. Study the game's visible features via my observations and permitted recordings. Produce a research report mapping each feature to an **independent PokeNavis design**, including architecture, Godot implementation options, improvements, acceptance tests and dependencies. Distinguish observations from assumptions and seek owner approval before changing gameplay code.
 
 ## Legal and platform cautions
 
