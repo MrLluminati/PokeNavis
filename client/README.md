@@ -1,6 +1,6 @@
 # PokeNavis Godot Client
 
-**Status:** PN-002 first walkable test world was merged in [PR #3](https://github.com/MrLluminati/PokeNavis/pull/3). PN-003 adds an NPC and dialogue on a feature branch awaiting review. This is an offline prototype, not a complete RPG.
+**Status:** PN-002 first walkable test world was merged in [PR #3](https://github.com/MrLluminati/PokeNavis/pull/3). PN-003 adds an NPC and dialogue in [PR #5](https://github.com/MrLluminati/PokeNavis/pull/5), awaiting review. This is an offline prototype, not a complete RPG.
 
 ## Requirements and launch
 

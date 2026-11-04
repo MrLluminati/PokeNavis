@@ -24,7 +24,7 @@
 
 **Phase 1 objective:** build an original, offline 2D vertical slice beginning with a walkable test world, then NPC interaction, encounters, deterministic battles and local save.
 
-**Immediate next action:** Project owner reviews the PN-003 pull request and [verification evidence](../client/README.md), then merges if accepted. PN-004 remains Backlog.
+**Immediate next action:** Project owner reviews [PN-003 PR #5](https://github.com/MrLluminati/PokeNavis/pull/5) and [verification evidence](../client/README.md), then merges if accepted. PN-004 remains Backlog.
 
 ## What is currently in progress?
 

@@ -1,6 +1,6 @@
 # PN-003 — NPC Interaction and Dialogue
 
-**Status:** Implemented on `feature/PN-003-npc-dialogue`; in review, not merged. See [client verification](../client/README.md).
+**Status:** Implemented on `feature/PN-003-npc-dialogue`; [PR #5](https://github.com/MrLluminati/PokeNavis/pull/5) is in review, not merged. See [client verification](../client/README.md).
 **Dependency:** [PN-002 merged](https://github.com/MrLluminati/PokeNavis/pull/3).  
 **Phase:** 1 — offline vertical slice · **Priority:** P0.  
 **Godot:** 4.7.2 stable (standard), GDScript, GL Compatibility.  
