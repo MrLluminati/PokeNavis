@@ -63,7 +63,7 @@ README.md
 
 ## Project status and collaboration
 
-**Current state:** Godot 4.7.2 client bootstrap was merged in [PR #1](https://github.com/MrLluminati/PokeNavis/pull/1). [PN-002](docs/PN-002-SPEC.md) now provides two walkable placeholder zones on a feature branch and is awaiting review; there is not yet a playable RPG.
+**Current state:** Godot 4.7.2 client bootstrap was merged in [PR #1](https://github.com/MrLluminati/PokeNavis/pull/1). [PN-002](docs/PN-002-SPEC.md) now provides two walkable placeholder zones in [PR #3](https://github.com/MrLluminati/PokeNavis/pull/3) and is awaiting review; there is not yet a playable RPG.
 
 **Start here if you're new:** [Current Status](docs/STATUS.md) · [Task Queue](docs/TASKS.md) · [Design Decisions](docs/DECISIONS.md) · [Contributing Guide](CONTRIBUTING.md) · [Codex Instructions](AGENTS.md) · [Changelog](CHANGELOG.md).
 

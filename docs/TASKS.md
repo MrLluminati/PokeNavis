@@ -15,7 +15,7 @@ A proposed task is not authorization to implement undefined product decisions. C
 | ID | Task | Priority | Status | Owner / next actor | Dependencies |
 | --- | --- | --- | --- | --- | --- |
 | PN-001 | Bootstrap runnable Godot client project | P0 | **Done** | Merged [PR #1](https://github.com/MrLluminati/PokeNavis/pull/1) on 2026-11-04 | None |
-| PN-002 | [First 2D test world, movement and collision](PN-002-SPEC.md) | P0 | **In review** | Project owner reviews PN-002 PR; [Issue #2](https://github.com/MrLluminati/PokeNavis/issues/2) | Owner review and merge |
+| PN-002 | [First 2D test world, movement and collision](PN-002-SPEC.md) | P0 | **In review** | Project owner reviews [PR #3](https://github.com/MrLluminati/PokeNavis/pull/3); [Issue #2](https://github.com/MrLluminati/PokeNavis/issues/2) | Owner review and merge |
 | PN-003 | NPC interaction and minimal dialogue | P0 | Backlog | Codex after PN-002 | PN-002 |
 | PN-004 | Pure battle state/action/event schema | P0 | Backlog | ChatGPT specification + owner approval; Codex implementation | Battle rule scope |
 | PN-005 | Deterministic battle core with tests | P0 | Backlog | Codex | PN-004 |
@@ -29,11 +29,11 @@ The sequence above is the approved **Phase 1 offline vertical slice** backlog. P
 
 ## PN-002 verification handoff (feature branch)
 
-**Objective:** Two original placeholder zones, four-direction player movement, collision, camera bounds and safe two-way exits. **Branch:** `feature/PN-002-world-movement`. **Issue:** [#2](https://github.com/MrLluminati/PokeNavis/issues/2). **Status:** In review, not Done.
+**Objective:** Two original placeholder zones, four-direction player movement, collision, camera bounds and safe two-way exits. **Branch:** `feature/PN-002-world-movement`. **Issue:** [#2](https://github.com/MrLluminati/PokeNavis/issues/2). **PR:** [#3](https://github.com/MrLluminati/PokeNavis/pull/3). **Status:** In review, not Done.
 
 **Observed on 2026-11-04:** Windows x86_64, official Godot 4.7.2 standard (`4.7.2.stable.official.ed1daf0bf`). Headless import and 30-frame startup exited 0 with no script/resource errors. The development test `godot --headless --path client --script res://tests/world_smoke.gd` exited 0 with 32 passing checks: physical D/Up-arrow mapping, cardinal movement, stop on release, camera follow/limits, village and route blockers/edges, both transitions, safe arrival and relaunch. Editor F5 displayed Village at 960×540; Output showed zero errors and warnings. Command-line graphical captures of both zones exited 0 and are in [screenshots](screenshots/). See [client README](../client/README.md) for commands and limits of graphical input verification.
 
-**Next actor:** Project owner reviews the PR, then merges if accepted. PN-003 remains Backlog.
+**Next actor:** Project owner reviews [PR #3](https://github.com/MrLluminati/PokeNavis/pull/3), then merges if accepted. PN-003 remains Backlog.
 
 ## Completed handoff: PN-001 (merged PR #1)
 

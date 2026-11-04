@@ -2,7 +2,7 @@
 
 **Last reviewed:** 2026-11-04  
 **Phase:** 1 — Offline vertical slice (first test world in review)
-**Overall state:** **PN-001 is Done**. **PN-002 is In review**: two original walkable test zones, movement, collisions, camera and safe transitions are implemented on `feature/PN-002-world-movement`, with Godot 4.7.2 verification recorded in [client README](../client/README.md). No battle, NPC or multiplayer mechanics exist yet.
+**Overall state:** **PN-001 is Done**. **PN-002 is In review** in [PR #3](https://github.com/MrLluminati/PokeNavis/pull/3): two original walkable test zones, movement, collisions, camera and safe transitions are implemented, with Godot 4.7.2 verification recorded in [client README](../client/README.md). No battle, NPC or multiplayer mechanics exist yet.
 
 > This page is the fastest way for any contributor, reviewer or Codex session to understand current work. Update the date and content when the overall state changes, not merely for formatting edits.
 
@@ -14,7 +14,7 @@
 | Game design foundation | **Drafted** | [GDD](GDD.md) and [decisions](DECISIONS.md); some important mechanics open |
 | Architecture and phased plan | **Drafted** | [Architecture](ARCHITECTURE.md), [Roadmap](ROADMAP.md) |
 | Contributor / Codex workflow | **Established** | [AGENTS.md](../AGENTS.md), [CONTRIBUTING.md](../CONTRIBUTING.md), [Task board](TASKS.md) |
-| Godot client | **PN-002 in review** | [Issue #2](https://github.com/MrLluminati/PokeNavis/issues/2); two walkable zones pass Godot 4.7.2 import, focused movement/transition checks and graphical launch |
+| Godot client | **PN-002 in review** | [PR #3](https://github.com/MrLluminati/PokeNavis/pull/3); two walkable zones pass Godot 4.7.2 import, focused movement/transition checks and graphical launch |
 | Turn-based battle engine | **Not started** | Only a placeholder directory exists |
 | Multiplayer server | **Not started** | Only a placeholder directory exists |
 | Automated build/CI | **Not started** | Manual smoke commands passed; no automated CI yet |
@@ -24,7 +24,7 @@
 
 **Phase 1 objective:** build an original, offline 2D vertical slice beginning with a walkable test world, then NPC interaction, encounters, deterministic battles and local save.
 
-**Immediate next action:** Project owner reviews the PN-002 pull request and [verification evidence](../client/README.md). Merge after approval. PN-003 remains Backlog.
+**Immediate next action:** Project owner reviews [PR #3](https://github.com/MrLluminati/PokeNavis/pull/3) and [verification evidence](../client/README.md). Merge after approval. PN-003 remains Backlog.
 
 ## What is currently in progress?
 

@@ -1,6 +1,6 @@
 # PN-002 — First 2D Test World, Player Movement and Collision
 
-**Status:** Implemented on `feature/PN-002-world-movement`; in review, not merged. See [client verification](../client/README.md).
+**Status:** Implemented on `feature/PN-002-world-movement`; [PR #3](https://github.com/MrLluminati/PokeNavis/pull/3) is in review, not merged. See [client verification](../client/README.md).
 **Dependency:** [PN-001 merged](https://github.com/MrLluminati/PokeNavis/pull/1)  
 **Priority:** P0 · **Engine:** Godot 4.7.2 stable (standard), GDScript, GL Compatibility  
 **Working branch:** `feature/PN-002-world-movement` (created from current `main`).

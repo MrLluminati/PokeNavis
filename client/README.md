@@ -1,6 +1,6 @@
 # PokeNavis Godot Client
 
-**Status:** PN-002 first walkable test world is implemented on a feature branch and awaiting review. This is an offline prototype, not a playable RPG.
+**Status:** PN-002 first walkable test world is implemented in [PR #3](https://github.com/MrLluminati/PokeNavis/pull/3) and awaiting review. This is an offline prototype, not a playable RPG.
 
 ## Requirements and launch
 

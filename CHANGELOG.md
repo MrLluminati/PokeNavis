@@ -4,7 +4,7 @@ This is a readable record of meaningful changes to PokeNavis. Dates use UTC and 
 
 ## Unreleased
 
-### PN-002 — In review
+### PN-002 — In review ([PR #3](https://github.com/MrLluminati/PokeNavis/pull/3))
 - Added two original connected test maps, a reusable player scene, cardinal WASD/arrow movement, solid blockers, bounded camera and safe two-way exits under [Issue #2](https://github.com/MrLluminati/PokeNavis/issues/2).
 - Godot 4.7.2 import/startup, 32 focused checks, editor F5 and graphical captures passed; see [client verification](client/README.md). Pending owner review and merge.
 
