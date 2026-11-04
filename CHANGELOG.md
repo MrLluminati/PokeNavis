@@ -4,6 +4,13 @@ This is a readable record of meaningful changes to PokeNavis. Dates use UTC and 
 
 ## Unreleased
 
+### REF-001 — PokeMMO reference analysis ([PR #7](https://github.com/MrLluminati/PokeNavis/pull/7), merged 2026-11-04)
+- Added a read-only installation-metadata and published-support-documentation [research report](docs/research/pokemmo-feature-analysis.md) covering ten PokeNavis feature areas, independent architecture proposals, implementation priorities, tests and verified limitations.
+- No local PokeMMO gameplay was observed or proprietary client/ROM material copied into PokeNavis.
+
+### PN-004 — Battle contract design (draft only)
+- Created a [draft versioned schema proposal](docs/PN-004-SPEC-DRAFT.md) and [Issue #8](https://github.com/MrLluminati/PokeNavis/issues/8) for owner approval. **No battle code implemented; task remains Backlog.**
+
 ### Development research guidance
 - Added [Reference Research Protocol](docs/REFERENCE-RESEARCH.md) for Codex: study visible gameplay behavior and produce independent requirements, not client/ROM extraction or reuse of copyrighted assets.
 
