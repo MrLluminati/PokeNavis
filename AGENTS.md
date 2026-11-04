@@ -4,7 +4,7 @@ These instructions apply across the repository. **Read this file first** when st
 
 ## Mission and current phase
 
-PokeNavis is a 2D pixel-art, multiplayer monster-battling RPG concept. We are currently in **Phase 1 — offline vertical slice**. PN-001 bootstrap and PN-002 walkable world are merged. PN-003 NPC interaction is implemented on a feature branch and in review. There is no backend or complete RPG yet. Do not describe a feature as implemented unless files and tests establish that it is.
+PokeNavis is a 2D pixel-art, multiplayer monster-battling RPG concept. We are currently in **Phase 1 — offline vertical slice**. PN-001 bootstrap, PN-002 walkable world and PN-003 NPC dialogue are merged. PN-004 battle contract remains Backlog until owner-approved scope is prepared. There is no backend or complete RPG yet. Do not describe a feature as implemented unless files and tests establish that it is.
 
 The long-term goal involves multiple regions, character progression, PvP and optional regional boss world records. Do not attempt those systems ahead of the approved milestone.
 
@@ -18,6 +18,7 @@ The long-term goal involves multiple regions, character progression, PvP and opt
 6. [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md): module boundaries.
 7. [docs/ROADMAP.md](docs/ROADMAP.md): development gates.
 8. [CONTRIBUTING.md](CONTRIBUTING.md): branching, testing, PR and documentation requirements.
+9. [docs/REFERENCE-RESEARCH.md](docs/REFERENCE-RESEARCH.md): safe comparative study of third-party games.
 
 ## Decision authority
 
@@ -41,6 +42,12 @@ An issue, task or agent suggestion is **not automatically product approval**. If
 10. Submit a PR using the template; wait for owner review before merging product-affecting changes.
 
 If execution cannot be completed (for example Godot not installed, engine not running or assets missing), create a precise handoff with blockers, files changed, commands attempted and next steps.
+
+## Reference-game research (mandatory)
+
+- Study PokeMMO through normal, authorized gameplay observation, notes and permitted screenshots/recordings. Treat reference mechanics as observations, not as permissions or approved PokeNavis design decisions.
+- Do not ingest, extract, decompile or reverse-engineer the PokeMMO client or ROM binaries; do not commit any third-party ROMs, copyrighted graphics, dialogue, audio, maps or derived asset dumps.
+- Implement original code/assets/data and keep a record of design choices. Follow [Reference Research Protocol](docs/REFERENCE-RESEARCH.md).
 
 ## Engineering constraints
 
