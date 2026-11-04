@@ -61,6 +61,16 @@ README.md
 .gitignore
 ```
 
+## Project status and collaboration
+
+**Current state:** Pre-production; docs and repository layout exist, but there is **no playable build yet**.
+
+**Start here if you're new:** [Current Status](docs/STATUS.md) · [Task Queue](docs/TASKS.md) · [Design Decisions](docs/DECISIONS.md) · [Contributing Guide](CONTRIBUTING.md) · [Codex Instructions](AGENTS.md) · [Changelog](CHANGELOG.md).
+
+**How we work:** The project owner approves decisions; ChatGPT helps prepare specifications and handoffs; Codex and contributors implement reviewed tasks. Every implementation task needs an ID, scope, owner, acceptance criteria, test evidence, current status and PR link. Keep repo documents current so a new collaborator does **not** need to read any chat history.
+
+The next engineering task is **PN-001: initialize a runnable Godot client**. It is blocked until the engine version and scripting language are approved. See [Task Queue](docs/TASKS.md).
+
 ## How to begin
 
 1. Read [Game Design Document](docs/GDD.md).
