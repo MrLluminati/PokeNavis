@@ -63,13 +63,13 @@ README.md
 
 ## Project status and collaboration
 
-**Current state:** Godot 4.7.2 bootstrap ([PR #1](https://github.com/MrLluminati/PokeNavis/pull/1)) and walkable Test Village/Test Route ([PR #3](https://github.com/MrLluminati/PokeNavis/pull/3)) are merged. [PN-003](docs/PN-003-SPEC.md) is ready for Codex. This remains an offline prototype, not a finished RPG.
+**Current state:** Godot 4.7.2 bootstrap ([PR #1](https://github.com/MrLluminati/PokeNavis/pull/1)) and walkable Test Village/Test Route ([PR #3](https://github.com/MrLluminati/PokeNavis/pull/3)) are merged. [PN-003 PR #5](https://github.com/MrLluminati/PokeNavis/pull/5) adds NPC interaction and dialogue and awaits review. This remains an offline prototype, not a finished RPG.
 
 **Start here if you're new:** [Current Status](docs/STATUS.md) · [Task Queue](docs/TASKS.md) · [Design Decisions](docs/DECISIONS.md) · [Contributing Guide](CONTRIBUTING.md) · [Codex Instructions](AGENTS.md) · [Changelog](CHANGELOG.md).
 
 **How we work:** The project owner approves decisions; ChatGPT helps prepare specifications and handoffs; Codex and contributors implement reviewed tasks. Every implementation task needs an ID, scope, owner, acceptance criteria, test evidence, current status and PR link. Keep repo documents current so a new collaborator does **not** need to read any chat history.
 
-The next engineering task is **PN-003: NPC interaction and dialogue**. See [Issue #4](https://github.com/MrLluminati/PokeNavis/issues/4), [implementation specification](docs/PN-003-SPEC.md), [Task Queue](docs/TASKS.md) and [Client instructions](client/README.md).
+The current engineering task is **PN-003: owner review of NPC interaction and dialogue**. See [Issue #4](https://github.com/MrLluminati/PokeNavis/issues/4), [implementation specification](docs/PN-003-SPEC.md), [Task Queue](docs/TASKS.md) and [Client instructions](client/README.md).
 
 ## How to begin
 
