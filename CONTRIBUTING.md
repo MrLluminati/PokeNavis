@@ -54,7 +54,7 @@ Avoid stale and contradictory docs. A new contributor should be able to find the
 
 ## Builds and tests
 
-There is currently **no executable project**, so no build or test command can honestly be supplied yet. When client/server packages exist, contributors must document version-pinned prerequisites and commands in the README (and/or each package README).
+The minimal Godot client bootstrap can now be launched with Godot 4.7.2 stable. Its smoke commands and observed results are in [client/README.md](client/README.md). There is no automated CI yet. When further client/server components exist, contributors must document version-pinned prerequisites and commands in their READMEs.
 
 After implementation begins, preferred verification:
 - Battle engine: deterministic unit and replay tests.

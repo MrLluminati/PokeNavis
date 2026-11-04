@@ -23,14 +23,14 @@ This register distinguishes **confirmed user decisions** from **proposals** and 
 | D-013 | Protection store | Additional protections can be purchased from an in-game store |
 | D-014 | Records | Regional streak world records, rankings and top-three annual rewards |
 | D-015 | Development | Start with small playable 2D prototype; grow to persistent MMO |
+| D-016 | Client bootstrap | PN-001 uses **Godot 4.7.2 stable (standard)** with **GDScript** and GL Compatibility; future upgrades require review |
 
 ## Proposals not yet confirmed
 
 | ID | Proposal | Why it matters |
 | --- | --- | --- |
 | P-001 | Global daily reset at 00:00 UTC | Uniform worldwide fairness |
-| P-002 | PC client in Godot 4, TypeScript backend | Simple incremental architecture |
-| P-003 | Use GDScript for initial client | Fast Godot iteration; can choose C# |
+| P-002 | Use Node.js/TypeScript for eventual online backend | Backend implementation and version selection remain future work |
 | P-004 | One canonical modern battle ruleset, classic formats later | Compatibility across generations |
 | P-005 | Story party restrictions in every newly started region | Prevent high-level imports trivializing stories |
 | P-006 | Annual regional and/or global trophies with cosmetic prizes | Awards need unambiguous eligibility |
@@ -64,6 +64,7 @@ This register distinguishes **confirmed user decisions** from **proposals** and 
 ### Before public release
 15. Asset, character, region, ROM, software and name rights clearance.
 16. Store currency, anti-fraud measures, moderation, privacy, retention and incident policies.
+17. Re-evaluate Godot engine upgrades deliberately rather than silently replacing the pinned bootstrap version.
 
 ## Decision-record process
 

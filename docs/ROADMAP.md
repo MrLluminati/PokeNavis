@@ -12,10 +12,10 @@
 - [x] Choose working project name, initialize GitHub repository.
 - [x] Write GDD, architecture, roadmap and decision register.
 - [ ] Freeze first vertical-slice scope and non-copyrighted placeholder content.
-- [ ] Select Godot version and GDScript vs C#.
+- [x] Select Godot 4.7.2 stable and GDScript for initial client (D-016).
 - [ ] Define battle model: creature, team, moves, turns, state and events.
 - [ ] Create a list of 15–25 essential tests.
-- [ ] Establish code style, branching/review policy and local setup instructions.
+- [x] Establish contributor/PR policy and draft initial client setup instructions (PN-001).
 
 **Exit gate:** Complete prototype specification and accepted reference art style.
 

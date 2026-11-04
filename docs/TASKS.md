@@ -14,7 +14,7 @@ A proposed task is not authorization to implement undefined product decisions. C
 
 | ID | Task | Priority | Status | Owner / next actor | Dependencies |
 | --- | --- | --- | --- | --- | --- |
-| PN-001 | Bootstrap runnable Godot client project | P0 | **Blocked** | Project owner to approve engine version and scripting language; then Codex | Client tech decision |
+| PN-001 | Bootstrap runnable Godot client project | P0 | **In review** | Project owner: review [PR #1](https://github.com/MrLluminati/PokeNavis/pull/1) | Owner review and merge |
 | PN-002 | Tilemap test zone, movement and collision | P0 | Backlog | Codex after PN-001 | PN-001 |
 | PN-003 | NPC interaction and minimal dialogue | P0 | Backlog | Codex after PN-002 | PN-002 |
 | PN-004 | Pure battle state/action/event schema | P0 | Backlog | ChatGPT specification + owner approval; Codex implementation | Battle rule scope |
@@ -27,13 +27,15 @@ A proposed task is not authorization to implement undefined product decisions. C
 
 These are **proposed sequence tasks**, not evidence that implementation has begun. The objective is Phase 1 offline vertical slice, not full MMORPG.
 
-## First Codex implementation handoff: PN-001 (pending owner approval)
+## Codex verification handoff: PN-001 (PR #1)
 
 **Objective:** Create the smallest reproducible, runnable Godot 4.x 2D project in `client/` with a minimal test scene. Do not implement player movement, battles, networking, Pokémon content or an asset pipeline yet.
 
-**Preconditions to unblock:** owner confirms Godot version and GDScript vs C#.
+**Confirmed decision:** Godot 4.7.2 stable (standard) and GDScript, see D-016. **PR:** https://github.com/MrLluminati/PokeNavis/pull/1 . Headless, graphical launch and editor F5 verification passed on Windows x86_64.
 
-**Allowed changes:** `client/` project and source scenes, required config files, minimal `client/README.md`, targeted root docs only as needed.
+**Verification (2026-11-04):** Official standard build `4.7.2.stable.official.ed1daf0bf`. `--headless --path client --import` exited 0 without errors. `--headless --path client --quit-after 5` exited 0 and printed `PokeNavis PN-001: startup scene ready`. A graphical `--path client --write-movie <temporary-output>.png --quit-after 5` run exited 0; an inspected 960×540 frame showed the expected title, subtitle and status. In the Godot editor, F5 launched the scene; the Output panel showed the startup message and zero errors. See [client README](../client/README.md) for the commands. Godot generated `.godot/` is ignored; generated `main.gd.uid` is tracked as source metadata. No runtime fix was needed.
+
+**Branch:** `feature/PN-001-godot-bootstrap`. **Allowed changes:** `client/` source scenes/config, `client/README.md`, and targeted docs or verification tests only.
 
 **Acceptance criteria**
 - `client/` contains a valid Godot project that opens in the chosen supported version.
@@ -44,8 +46,7 @@ These are **proposed sequence tasks**, not evidence that implementation has begu
 - No unlicensed Pokémon assets, ROM content, secrets or unrelated game features are added.
 - `docs/TASKS.md` and `docs/STATUS.md` reflect actual progress and contain PR/commit links.
 
-**Codex-ready request once unblocked:**
-> Read AGENTS.md and docs/TASKS.md. Implement PN-001 only in a branch named codex/PN-001-godot-bootstrap. Use the approved Godot version and scripting language. Add a minimal launchable 2D project and documentation. Run available smoke checks; report exact commands and outcomes, and open a PR. Do not implement movement, Pokémon assets, multiplayer or battle mechanics. Update the status/task documentation in the PR.
+**Reviewer handoff:** Review PR #1 and its [client verification record](../client/README.md). The editor F5 check passed. Merge only after owner approval. PN-002 remains Backlog.
 
 ## Follow-up tasks (outline)
 
