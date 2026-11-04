@@ -4,9 +4,13 @@ This is a readable record of meaningful changes to PokeNavis. Dates use UTC and 
 
 ## Unreleased
 
-### PN-003 — In review ([PR #5](https://github.com/MrLluminati/PokeNavis/pull/5))
+### Development research guidance
+- Added [Reference Research Protocol](docs/REFERENCE-RESEARCH.md) for Codex: study visible gameplay behavior and produce independent requirements, not client/ROM extraction or reuse of copyrighted assets.
+
+
+### PN-003 — Merged 2026-11-04 ([PR #5](https://github.com/MrLluminati/PokeNavis/pull/5))
 - Added a reusable solid Village NPC, line-of-sight interaction prompt, separate three-line dialogue data and a reusable screen-space panel under [Issue #4](https://github.com/MrLluminati/PokeNavis/issues/4).
-- Godot 4.7.2 import/startup, 33 focused NPC checks, 32 PN-002 regression checks, editor F5 and graphical prompt/panel captures passed; see [client verification](client/README.md). Pending owner review and merge.
+- Godot 4.7.2 import/startup, 33 focused NPC checks, 32 PN-002 regression checks, editor F5 and graphical prompt/panel captures passed; see [client verification](client/README.md). Owner-reported manual keyboard acceptance passed; merged into main.
 
 
 ### PN-002 — Merged 2026-11-04 ([PR #3](https://github.com/MrLluminati/PokeNavis/pull/3))
@@ -26,4 +30,4 @@ This is a readable record of meaningful changes to PokeNavis. Dates use UTC and 
 - Added a contributor/Codex workflow, project status dashboard and task queue.
 - Prepared initial offline prototype task backlog.
 
-**Current release status:** A walkable offline test world is merged; no complete playable RPG or public release exists yet.
+**Current release status:** A walkable offline test world with basic NPC dialogue is merged; no battle engine, complete playable RPG or public release exists yet.
