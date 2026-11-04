@@ -17,7 +17,7 @@ A proposed task is not authorization to implement undefined product decisions. C
 | PN-001 | Bootstrap runnable Godot client project | P0 | **Done** | Merged [PR #1](https://github.com/MrLluminati/PokeNavis/pull/1) on 2026-11-04 | None |
 | PN-002 | [First 2D test world, movement and collision](PN-002-SPEC.md) | P0 | **Done** | [PR #3](https://github.com/MrLluminati/PokeNavis/pull/3) merged 2026-11-04 | None |
 | PN-003 | [NPC interaction and dialogue](PN-003-SPEC.md) | P0 | **Done** | [PR #5](https://github.com/MrLluminati/PokeNavis/pull/5) merged 2026-11-04 | None |
-| PN-004 | Pure battle state/action/event schema | P0 | Backlog | ChatGPT specification + owner approval; Codex implementation | Battle rule scope |
+| PN-004 | [Pure battle state/action/event schema (draft)](PN-004-SPEC-DRAFT.md) | P0 | **Backlog — design review** | Project owner reviews [Issue #8](https://github.com/MrLluminati/PokeNavis/issues/8) before Codex implementation | Unapproved battle rule subset |
 | PN-005 | Deterministic battle core with tests | P0 | Backlog | Codex | PN-004 |
 | PN-006 | Battle scene and engine adapter | P1 | Backlog | Codex | PN-001, PN-005 |
 | PN-007 | Data-driven wild encounter trigger | P1 | Backlog | Codex | PN-002, PN-005 |
@@ -29,11 +29,11 @@ The sequence above is the approved **Phase 1 offline vertical slice** backlog. P
 
 ## Parallel research — REF-001
 
-**Status:** In review in [PR #7](https://github.com/MrLluminati/PokeNavis/pull/7) on `research/REF-001-pokemmo-feature-analysis`; [Issue #6](https://github.com/MrLluminati/PokeNavis/issues/6). The [research report](research/pokemmo-feature-analysis.md) records a read-only installation metadata survey, public support-documentation evidence, independent architecture proposals, test ideas and gaps. No owner gameplay recordings or observations were available. Project owner reviews the report; PN-004 remains Backlog pending its own approved specification.
+**Status:** **Done** — [PR #7](https://github.com/MrLluminati/PokeNavis/pull/7) merged on 2026-11-04 ([Issue #6](https://github.com/MrLluminati/PokeNavis/issues/6)). The [research report](research/pokemmo-feature-analysis.md) records a read-only installation metadata survey, published documentation, independent architecture proposals, and explicitly missing gameplay observations. No original game executable, ROM, private log or artwork was included. It informs, but does not approve, PN-004's battle rules.
 
 ## Current next action — PN-004 design, not implementation
 
-Define a minimal deterministic battle state/action/event schema and original placeholder combat rules, get owner approval, then create a scoped Codex task. Comparative research may use **observed gameplay**, authorized screenshots and notes, not PokeMMO client or ROM reverse engineering. See [Reference Research Protocol](REFERENCE-RESEARCH.md). PN-004 stays Backlog until specification and required rules are approved.
+Review the [PN-004 draft contract](PN-004-SPEC-DRAFT.md) and [design approval Issue #8](https://github.com/MrLluminati/PokeNavis/issues/8). Choose an intentionally limited first battle type, action set, state/version fields and unresolved rule boundaries; record only **approved** choices in [DECISIONS](DECISIONS.md). Only after approval should PN-004 become Ready for Codex. The merged [REF-001 report](research/pokemmo-feature-analysis.md) is optional design context, not gameplay evidence or implementation authorization.
 
 ## Completed handoff: PN-003 — merged PR #5
 
