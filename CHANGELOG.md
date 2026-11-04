@@ -4,9 +4,10 @@ This is a readable record of meaningful changes to PokeNavis. Dates use UTC and 
 
 ## Unreleased
 
-### Proposed in draft PR #1 (not merged)
-- Bootstrap a Godot 4.7.2/GDScript 2D startup scene and document how to run and smoke-test it.
-- Record engine choice and hand off runtime verification to Codex/local tester. No runnable build has yet been verified.
+### PN-001 — Godot client bootstrap ([PR #1](https://github.com/MrLluminati/PokeNavis/pull/1), pending merge)
+- Added a minimal Godot 4.7.2/GDScript 2D startup scene and documented client setup.
+- Codex verified successful import, headless startup and graphical rendering at 960×540 on Windows; results recorded in `client/README.md`.
+- Editor F5 confirmation and owner review remain outstanding; no gameplay features are implemented.
 
 
 ### Project foundation — 2026-11-04
