@@ -29,7 +29,7 @@ The sequence above is the approved **Phase 1 offline vertical slice** backlog. P
 
 ## Parallel research — REF-001
 
-**Status:** In review on `research/REF-001-pokemmo-feature-analysis`; [Issue #6](https://github.com/MrLluminati/PokeNavis/issues/6). The [research report](research/pokemmo-feature-analysis.md) records a read-only installation metadata survey, public support-documentation evidence, independent architecture proposals, test ideas and gaps. No owner gameplay recordings or observations were available. Project owner reviews the report; PN-004 remains Backlog pending its own approved specification.
+**Status:** In review in [PR #7](https://github.com/MrLluminati/PokeNavis/pull/7) on `research/REF-001-pokemmo-feature-analysis`; [Issue #6](https://github.com/MrLluminati/PokeNavis/issues/6). The [research report](research/pokemmo-feature-analysis.md) records a read-only installation metadata survey, public support-documentation evidence, independent architecture proposals, test ideas and gaps. No owner gameplay recordings or observations were available. Project owner reviews the report; PN-004 remains Backlog pending its own approved specification.
 
 ## Current next action — PN-004 design, not implementation
 
