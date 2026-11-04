@@ -69,7 +69,7 @@ README.md
 
 **How we work:** The project owner approves decisions; ChatGPT helps prepare specifications and handoffs; Codex and contributors implement reviewed tasks. Every implementation task needs an ID, scope, owner, acceptance criteria, test evidence, current status and PR link. Keep repo documents current so a new collaborator does **not** need to read any chat history.
 
-The next design task is **PN-004: battle state, actions and event schema**. Its requirements and placeholder rules must be approved before Codex implements it. Use the [Reference Research Protocol](docs/REFERENCE-RESEARCH.md) for non-infringing comparison with other games; see [Task Queue](docs/TASKS.md) and [Decisions](docs/DECISIONS.md).
+The next design task is **PN-004: battle state, actions and event schema**. [Draft specification](docs/PN-004-SPEC-DRAFT.md) and [design-review Issue #8](https://github.com/MrLluminati/PokeNavis/issues/8) are ready for owner consideration; PN-004 remains **Backlog** until its rules and scope are approved. The [REF-001 research report](docs/research/pokemmo-feature-analysis.md) is merged via [PR #7](https://github.com/MrLluminati/PokeNavis/pull/7). Follow the [Reference Research Protocol](docs/REFERENCE-RESEARCH.md); see [Task Queue](docs/TASKS.md) and [Decisions](docs/DECISIONS.md).
 
 ## How to begin
 
