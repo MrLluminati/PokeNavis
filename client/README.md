@@ -1,6 +1,6 @@
 # PokeNavis Godot Client
 
-**Status:** PN-001 starter scene on a feature branch, awaiting runtime smoke tests and review. This is not a playable RPG yet.
+**Status:** PN-001 starter scene verified with Godot 4.7.2; awaiting PR review. This is not a playable RPG yet.
 
 ## Required environment
 
@@ -31,7 +31,18 @@ The first command should report 4.7.2 stable. The next two import and launch the
 
 On Windows, replace `godot` with the full executable path if it is not in PATH. The launch steps do not require C#/.NET tooling.
 
-**Test evidence:** The bootstrap author could not run Godot because no Godot executable was available. These are instructions for Codex or a local contributor and **must not** be reported as passed until actually executed.
+## Verification (2026-11-04)
+
+Windows x86_64, official Godot 4.7.2 stable **standard** build (`4.7.2.stable.official.ed1daf0bf`):
+
+| Command from repository root | Result |
+| --- | --- |
+| `Godot_v4.7.2-stable_win64_console.exe --version` | Passed; printed `4.7.2.stable.official.ed1daf0bf` |
+| `Godot_v4.7.2-stable_win64_console.exe --headless --path client --import` | Passed; exit code 0, import and editor initialization completed without errors |
+| `Godot_v4.7.2-stable_win64_console.exe --headless --path client --quit-after 5` | Passed; exit code 0, printed `PokeNavis PN-001: startup scene ready` |
+| `Godot_v4.7.2-stable_win64_console.exe --path client --write-movie <temporary-output>.png --quit-after 5` | Passed; exit code 0, GL Compatibility rendered five 960×540 frames. The inspected frame displayed the expected title, subtitle and status text; output contained the startup message without errors. |
+
+The graphical scene was launched from the command line and its rendered frame inspected. The editor **F5 workflow was not performed**; a reviewer can follow the editor steps above to check that interaction separately. Generated `.godot/` files remain ignored. The generated `scripts/main.gd.uid` is committed as source metadata.
 
 ## Files
 
@@ -40,9 +51,10 @@ client/
   project.godot
   scenes/main.tscn
   scripts/main.gd
+  scripts/main.gd.uid
   README.md
 ```
 
 **Scope boundary:** No movement, tilemaps, encounters, battles, networking or external Pokémon assets are part of PN-001.
 
-**Next:** Codex should run and document these tests on the open PN-001 pull request, fix any errors and request owner review. PN-002 (test-zone movement and collision) begins only after the bootstrap is validated.
+**Next:** Project owner reviews PN-001 in PR #1. PN-002 (test-zone movement and collision) remains outside this task.

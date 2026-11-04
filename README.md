@@ -63,13 +63,13 @@ README.md
 
 ## Project status and collaboration
 
-**Current state:** Pre-production; first Godot scene proposed in [draft PR #1](https://github.com/MrLluminati/PokeNavis/pull/1). Runtime smoke checks are pending; no playable RPG exists.
+**Current state:** Pre-production; the first Godot scene in [PR #1](https://github.com/MrLluminati/PokeNavis/pull/1) passed import, headless startup and graphical launch checks with Godot 4.7.2. Owner review and editor F5 confirmation remain; no playable RPG exists.
 
 **Start here if you're new:** [Current Status](docs/STATUS.md) · [Task Queue](docs/TASKS.md) · [Design Decisions](docs/DECISIONS.md) · [Contributing Guide](CONTRIBUTING.md) · [Codex Instructions](AGENTS.md) · [Changelog](CHANGELOG.md).
 
 **How we work:** The project owner approves decisions; ChatGPT helps prepare specifications and handoffs; Codex and contributors implement reviewed tasks. Every implementation task needs an ID, scope, owner, acceptance criteria, test evidence, current status and PR link. Keep repo documents current so a new collaborator does **not** need to read any chat history.
 
-The current engineering task is **PN-001: verify the Godot 4.7.2/GDScript client bootstrap** in [PR #1](https://github.com/MrLluminati/PokeNavis/pull/1), then obtain owner review. See [Task Queue](docs/TASKS.md) and [Client instructions](client/README.md).
+The current engineering task is **PN-001: owner review of the verified Godot 4.7.2/GDScript client bootstrap** in [PR #1](https://github.com/MrLluminati/PokeNavis/pull/1). See [Task Queue](docs/TASKS.md) and [Client instructions](client/README.md).
 
 ## How to begin
 
