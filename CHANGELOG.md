@@ -4,9 +4,13 @@ This is a readable record of meaningful changes to PokeNavis. Dates use UTC and 
 
 ## Unreleased
 
-### PN-002 — In review ([PR #3](https://github.com/MrLluminati/PokeNavis/pull/3))
+### PN-003 — Ready for development (not implemented)
+- [Specification](docs/PN-003-SPEC.md) and [Issue #4](https://github.com/MrLluminati/PokeNavis/issues/4) prepared for NPC interaction and dialogue; no NPC gameplay code has been committed.
+
+
+### PN-002 — Merged 2026-11-04 ([PR #3](https://github.com/MrLluminati/PokeNavis/pull/3))
 - Added two original connected test maps, a reusable player scene, cardinal WASD/arrow movement, solid blockers, bounded camera and safe two-way exits under [Issue #2](https://github.com/MrLluminati/PokeNavis/issues/2).
-- Godot 4.7.2 import/startup, 32 focused checks, editor F5 and graphical captures passed; see [client verification](client/README.md). Pending owner review and merge.
+- Codex documented passing Godot 4.7.2 import/startup, 32 automated checks, editor F5 and graphical captures; see [client verification](client/README.md). Merged into main. A separate continuous keyboard traversal was not recorded.
 
 
 ### PN-001 — Godot client bootstrap ([PR #1](https://github.com/MrLluminati/PokeNavis/pull/1), merged 2026-11-04)
@@ -21,4 +25,4 @@ This is a readable record of meaningful changes to PokeNavis. Dates use UTC and 
 - Added a contributor/Codex workflow, project status dashboard and task queue.
 - Prepared initial offline prototype task backlog.
 
-**Current release status:** A walkable offline prototype is in review; no complete playable RPG or release exists yet.
+**Current release status:** A walkable offline test world is merged; no complete playable RPG or public release exists yet.
