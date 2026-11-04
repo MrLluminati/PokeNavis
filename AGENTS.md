@@ -45,8 +45,8 @@ If execution cannot be completed (for example Godot not installed, engine not ru
 
 ## Reference-game research (mandatory)
 
-- Study PokeMMO through normal, authorized gameplay observation, notes and permitted screenshots/recordings. Treat reference mechanics as observations, not as permissions or approved PokeNavis design decisions.
-- Do not ingest, extract, decompile or reverse-engineer the PokeMMO client or ROM binaries; do not commit any third-party ROMs, copyrighted graphics, dialogue, audio, maps or derived asset dumps.
+- Study PokeMMO through ordinary gameplay observation, authorized notes and permitted screenshots/recordings. A **read-only local installation inventory** (filenames, folder layout, extension/size metadata, nonsecret user-facing configuration, supported customization documentation) is permitted within the boundaries defined by [Reference Research Protocol](docs/REFERENCE-RESEARCH.md). Treat observations as references, not as approved game rules.
+- Do not extract, decompile, disassemble, decrypt, unpack or reverse-engineer client/ROM binaries, inspect internal memory/network traffic, automate live PokeMMO gameplay, or commit copyrighted third-party assets, data or code. Never read or expose credentials or private account details.
 - Implement original code/assets/data and keep a record of design choices. Follow [Reference Research Protocol](docs/REFERENCE-RESEARCH.md).
 
 ## Engineering constraints
