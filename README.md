@@ -63,7 +63,7 @@ README.md
 
 ## Project status and collaboration
 
-**Current state:** Pre-production; the first Godot scene in [PR #1](https://github.com/MrLluminati/PokeNavis/pull/1) passed import, headless startup and graphical launch checks with Godot 4.7.2. Owner review and editor F5 confirmation remain; no playable RPG exists.
+**Current state:** Pre-production; the first Godot scene in [PR #1](https://github.com/MrLluminati/PokeNavis/pull/1) passed import, headless startup, graphical launch and editor F5 checks with Godot 4.7.2. Owner review remains; no playable RPG exists.
 
 **Start here if you're new:** [Current Status](docs/STATUS.md) · [Task Queue](docs/TASKS.md) · [Design Decisions](docs/DECISIONS.md) · [Contributing Guide](CONTRIBUTING.md) · [Codex Instructions](AGENTS.md) · [Changelog](CHANGELOG.md).
 

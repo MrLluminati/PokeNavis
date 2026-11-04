@@ -41,8 +41,9 @@ Windows x86_64, official Godot 4.7.2 stable **standard** build (`4.7.2.stable.of
 | `Godot_v4.7.2-stable_win64_console.exe --headless --path client --import` | Passed; exit code 0, import and editor initialization completed without errors |
 | `Godot_v4.7.2-stable_win64_console.exe --headless --path client --quit-after 5` | Passed; exit code 0, printed `PokeNavis PN-001: startup scene ready` |
 | `Godot_v4.7.2-stable_win64_console.exe --path client --write-movie <temporary-output>.png --quit-after 5` | Passed; exit code 0, GL Compatibility rendered five 960×540 frames. The inspected frame displayed the expected title, subtitle and status text; output contained the startup message without errors. |
+| Godot editor: open `client/project.godot`, press F5 | Passed; the running scene displayed the expected title, subtitle and status, and the Output panel printed `PokeNavis PN-001: startup scene ready` with zero errors. |
 
-The graphical scene was launched from the command line and its rendered frame inspected. The editor **F5 workflow was not performed**; a reviewer can follow the editor steps above to check that interaction separately. Generated `.godot/` files remain ignored. The generated `scripts/main.gd.uid` is committed as source metadata.
+The graphical scene was launched from the command line and its rendered frame inspected. The editor F5 workflow was also verified. Generated `.godot/` files remain ignored. The generated `scripts/main.gd.uid` is committed as source metadata.
 
 ## Files
 
