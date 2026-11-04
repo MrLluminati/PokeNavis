@@ -39,7 +39,7 @@
 
 ## Latest verified milestone
 
-- PN-003 branch passed headless import/startup, 33 NPC dialogue checks, all 32 PN-002 regression checks, editor F5 launch and inspected prompt/dialogue frames on Windows with Godot 4.7.2 stable. A separate continuous manual keyboard conversation was not recorded.
+- PN-003 branch passed headless import/startup, 33 NPC dialogue checks, all 32 PN-002 regression checks, editor F5 launch and inspected prompt/dialogue frames on Windows with Godot 4.7.2 stable. A separate continuous keyboard conversation was not recorded by Codex; the project owner subsequently reported the manual NPC interaction test **passed** on 2026-11-04. PR #5 remains unmerged pending owner merge.
 - PN-002 merged via [PR #3](https://github.com/MrLluminati/PokeNavis/pull/3) on 2026-11-04. Codex recorded passing headless startup/import, 32 automated checks, F5 launch and graphical captures. A separate continuous manual keyboard traversal was not documented.
 - PN-001 merged via [PR #1](https://github.com/MrLluminati/PokeNavis/pull/1) on 2026-11-04.
 - GitHub links and task details are in [TASKS.md](TASKS.md).
