@@ -4,7 +4,7 @@ These instructions apply across the repository. **Read this file first** when st
 
 ## Mission and current phase
 
-PokeNavis is a 2D pixel-art, multiplayer monster-battling RPG concept. We are currently in **Phase 1 — offline vertical slice**. PN-001 bootstrap and PN-002 walkable world are merged. PN-003 NPC interaction is Ready for Codex. There is no backend or complete RPG yet. Do not describe a feature as implemented unless files and tests establish that it is.
+PokeNavis is a 2D pixel-art, multiplayer monster-battling RPG concept. We are currently in **Phase 1 — offline vertical slice**. PN-001 bootstrap and PN-002 walkable world are merged. PN-003 NPC interaction is implemented on a feature branch and in review. There is no backend or complete RPG yet. Do not describe a feature as implemented unless files and tests establish that it is.
 
 The long-term goal involves multiple regions, character progression, PvP and optional regional boss world records. Do not attempt those systems ahead of the approved milestone.
 

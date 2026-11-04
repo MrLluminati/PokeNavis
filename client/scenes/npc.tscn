@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/npc.gd" id="1_npc"]
+[ext_resource type="PackedScene" path="res://scenes/dialogue_ui.tscn" id="2_ui"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npc"]
+size = Vector2(24, 24)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_interaction"]
+radius = 48.0
+
+[node name="NPC" type="StaticBody2D"]
+collision_layer = 1
+collision_mask = 0
+script = ExtResource("1_npc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_npc")
+
+[node name="Body" type="ColorRect" parent="."]
+offset_left = -12.0
+offset_top = -17.0
+offset_right = 12.0
+offset_bottom = 11.0
+mouse_filter = 2
+color = Color(0.71, 0.39, 0.75, 1)
+
+[node name="Cap" type="ColorRect" parent="."]
+offset_left = -12.0
+offset_top = -17.0
+offset_right = 12.0
+offset_bottom = -9.0
+mouse_filter = 2
+color = Color(0.22, 0.17, 0.34, 1)
+
+[node name="InteractionRange" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionRange"]
+shape = SubResource("CircleShape2D_interaction")
+
+[node name="Prompt" type="Label" parent="."]
+offset_left = -38.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = -27.0
+theme_override_font_sizes/font_size = 15
+text = "E / Enter: Talk"
+
+[node name="DialogueUI" parent="." instance=ExtResource("2_ui")]

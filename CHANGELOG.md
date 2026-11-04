@@ -4,8 +4,9 @@ This is a readable record of meaningful changes to PokeNavis. Dates use UTC and 
 
 ## Unreleased
 
-### PN-003 — Ready for development (not implemented)
-- [Specification](docs/PN-003-SPEC.md) and [Issue #4](https://github.com/MrLluminati/PokeNavis/issues/4) prepared for NPC interaction and dialogue; no NPC gameplay code has been committed.
+### PN-003 — In review
+- Added a reusable solid Village NPC, line-of-sight interaction prompt, separate three-line dialogue data and a reusable screen-space panel under [Issue #4](https://github.com/MrLluminati/PokeNavis/issues/4).
+- Godot 4.7.2 import/startup, 33 focused NPC checks, 32 PN-002 regression checks, editor F5 and graphical prompt/panel captures passed; see [client verification](client/README.md). Pending owner review and merge.
 
 
 ### PN-002 — Merged 2026-11-04 ([PR #3](https://github.com/MrLluminati/PokeNavis/pull/3))

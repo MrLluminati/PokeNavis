@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/dialogue_ui.gd" id="1_ui"]
+
+[node name="DialogueUI" type="CanvasLayer"]
+layer = 2
+visible = false
+script = ExtResource("1_ui")
+
+[node name="Panel" type="PanelContainer" parent="."]
+offset_left = 48.0
+offset_top = 382.0
+offset_right = 912.0
+offset_bottom = 524.0
+
+[node name="Margin" type="MarginContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 10
+
+[node name="Stack" type="VBoxContainer" parent="Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Speaker" type="Label" parent="Panel/Margin/Stack"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Speaker"
+
+[node name="Body" type="Label" parent="Panel/Margin/Stack"]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "Dialogue text"
+autowrap_mode = 3
+
+[node name="Hint" type="Label" parent="Panel/Margin/Stack"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "E / Enter: next  |  Esc: cancel"

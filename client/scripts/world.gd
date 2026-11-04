@@ -5,6 +5,7 @@ const MAP_WIDTH := 40
 const MAP_HEIGHT := 28
 const MAP_SIZE := Vector2(MAP_WIDTH * TILE, MAP_HEIGHT * TILE)
 const PLAYER_SCENE := preload("res://scenes/player.tscn")
+const NPC_SCENE := preload("res://scenes/npc.tscn")
 const ARRIVAL_META := &"pn002_arrival_from"
 
 @export_enum("village", "route") var zone: String = "village"
@@ -20,6 +21,7 @@ func _ready() -> void:
 	_build_collisions()
 	_build_exit()
 	_spawn_player()
+	_build_npc()
 	_build_labels()
 	queue_redraw()
 
@@ -122,6 +124,15 @@ func _build_labels() -> void:
 	marker.add_theme_font_size_override("font_size", 15)
 	marker.text = "TO ROUTE >" if zone == "village" else "< TO VILLAGE"
 	add_child(marker)
+
+
+func _build_npc() -> void:
+	if zone != "village":
+		return
+	var npc := NPC_SCENE.instantiate()
+	npc.name = "GuideNPC"
+	npc.position = Vector2(480, 448)
+	add_child(npc)
 
 
 func _on_exit_entered(body: Node2D) -> void:
