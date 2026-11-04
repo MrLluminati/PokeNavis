@@ -26,6 +26,11 @@
 
 **Immediate next action:** Scope PN-004's battle state/actions/events and placeholder rules for owner approval, then prepare a Codex task. Use [Reference Research Protocol](REFERENCE-RESEARCH.md) for comparisons; do not reverse-engineer PokeMMO clients or ROMs or copy protected assets.
 
+## Parallel reference research
+
+- [REF-001: PokeMMO feature-analysis research](https://github.com/MrLluminati/PokeNavis/issues/6) is prepared; Codex can begin **read-only local reference study** when the owner supplies its installation directory and any permitted observations/captures.
+- Follow the [Reference Research Protocol](REFERENCE-RESEARCH.md). Deliver a comparative engineering report, not copied source/assets or gameplay code. This does not authorize PN-004 implementation.
+
 ## What is currently in progress?
 
 - No coding task is presently In progress.
