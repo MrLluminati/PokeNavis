@@ -1,6 +1,6 @@
 # PokeNavis Godot Client
 
-**Status:** PN-002 first walkable test world was merged in [PR #3](https://github.com/MrLluminati/PokeNavis/pull/3). PN-003 adds an NPC and dialogue in [PR #5](https://github.com/MrLluminati/PokeNavis/pull/5), awaiting review. This is an offline prototype, not a complete RPG.
+**Status:** PN-002 first walkable test world was merged in [PR #3](https://github.com/MrLluminati/PokeNavis/pull/3). PN-003 NPC interaction and dialogue were merged in [PR #5](https://github.com/MrLluminati/PokeNavis/pull/5) after Codex tests and owner-reported manual acceptance. This is an offline prototype, not a complete RPG.
 
 ## Requirements and launch
 
@@ -80,7 +80,7 @@ Windows x86_64, official Godot 4.7.2 stable standard executable `Godot_v4.7.2-st
 | Editor F5 | Exit not applicable; Village opened in the 960×540 debug window with the NPC visible; editor Output showed zero errors and warnings |
 | `--path client --script res://tests/npc_visual_capture.gd --write-movie <temporary-output>.png --quit-after 25` | Exit 0; GL Compatibility rendered 25 frames. Inspected prompt and dialogue panel frames are below. |
 
-The focused test drove interaction through Godot input events and physics frames. At the time of the Codex verification, a continuous manual keyboard conversation had **not** been recorded. **Owner follow-up (2026-11-04):** The project owner subsequently reported that the manual in-editor NPC conversation test **passed**. This is owner-reported acceptance evidence, not a test independently rerun by ChatGPT. The screenshots below were produced by the visual capture script, which places the player near the NPC and sends one E key event.
+The focused test drove interaction through Godot input events and physics frames. At the time of Codex verification, a continuous manual keyboard conversation had **not** been recorded. **Owner follow-up (2026-11-04):** The project owner subsequently reported that the manual in-editor NPC conversation test **passed**; PR #5 was merged afterward. This is owner-reported acceptance evidence, not a test independently rerun by ChatGPT. The screenshots below were produced by the visual capture script, which places the player near the NPC and sends one E key event.
 
 ![Village Guide approach prompt](../docs/screenshots/pn-003-approach-prompt.png)
 
