@@ -28,8 +28,8 @@
 
 ## Parallel reference research
 
-- [REF-001: PokeMMO feature-analysis research](https://github.com/MrLluminati/PokeNavis/issues/6) is prepared; Codex can begin **read-only local reference study** when the owner supplies its installation directory and any permitted observations/captures.
-- Follow the [Reference Research Protocol](REFERENCE-RESEARCH.md). Deliver a comparative engineering report, not copied source/assets or gameplay code. This does not authorize PN-004 implementation.
+- [REF-001: PokeMMO feature-analysis research](https://github.com/MrLluminati/PokeNavis/issues/6) is **In review** in [PR #7](https://github.com/MrLluminati/PokeNavis/pull/7) on `research/REF-001-pokemmo-feature-analysis`. The owner supplied the installation shortcut folder; the [report](research/pokemmo-feature-analysis.md) records a read-only metadata survey, published support evidence, independent proposals and test ideas.
+- No owner gameplay recordings or observations were available, so runtime behavior remains unverified locally. Follow the [Reference Research Protocol](REFERENCE-RESEARCH.md); the report contains no copied source/assets or gameplay code and does not authorize PN-004 implementation.
 
 ## What is currently in progress?
 

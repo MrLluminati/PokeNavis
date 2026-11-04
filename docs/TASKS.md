@@ -27,6 +27,10 @@ A proposed task is not authorization to implement undefined product decisions. C
 
 The sequence above is the approved **Phase 1 offline vertical slice** backlog. PN-001, PN-002 and PN-003 are Done on main. PN-004 remains Backlog pending a minimal battle-rules scope and owner approval; subsequent tasks are not started.
 
+## Parallel research — REF-001
+
+**Status:** In review in [PR #7](https://github.com/MrLluminati/PokeNavis/pull/7) on `research/REF-001-pokemmo-feature-analysis`; [Issue #6](https://github.com/MrLluminati/PokeNavis/issues/6). The [research report](research/pokemmo-feature-analysis.md) records a read-only installation metadata survey, public support-documentation evidence, independent architecture proposals, test ideas and gaps. No owner gameplay recordings or observations were available. Project owner reviews the report; PN-004 remains Backlog pending its own approved specification.
+
 ## Current next action — PN-004 design, not implementation
 
 Define a minimal deterministic battle state/action/event schema and original placeholder combat rules, get owner approval, then create a scoped Codex task. Comparative research may use **observed gameplay**, authorized screenshots and notes, not PokeMMO client or ROM reverse engineering. See [Reference Research Protocol](REFERENCE-RESEARCH.md). PN-004 stays Backlog until specification and required rules are approved.
