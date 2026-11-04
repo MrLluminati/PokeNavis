@@ -24,17 +24,17 @@
 
 **Phase 1 objective:** build an original, offline 2D vertical slice beginning with a walkable test world, then NPC interaction, encounters, deterministic battles and local save.
 
-**Immediate next action:** Scope PN-004's battle state/actions/events and placeholder rules for owner approval, then prepare a Codex task. Use [Reference Research Protocol](REFERENCE-RESEARCH.md) for comparisons; do not reverse-engineer PokeMMO clients or ROMs or copy protected assets.
+**Immediate next action:** Review [PN-004 proposed battle contract](PN-004-SPEC-DRAFT.md) and [design Issue #8](https://github.com/MrLluminati/PokeNavis/issues/8). Approve a minimal action/state/event scope before moving PN-004 from Backlog to Ready. The [REF-001 report](research/pokemmo-feature-analysis.md) is merged research context, not firsthand gameplay verification.
 
 ## Parallel reference research
 
-- [REF-001: PokeMMO feature-analysis research](https://github.com/MrLluminati/PokeNavis/issues/6) is **In review** in [PR #7](https://github.com/MrLluminati/PokeNavis/pull/7) on `research/REF-001-pokemmo-feature-analysis`. The owner supplied the installation shortcut folder; the [report](research/pokemmo-feature-analysis.md) records a read-only metadata survey, published support evidence, independent proposals and test ideas.
-- No owner gameplay recordings or observations were available, so runtime behavior remains unverified locally. Follow the [Reference Research Protocol](REFERENCE-RESEARCH.md); the report contains no copied source/assets or gameplay code and does not authorize PN-004 implementation.
+- [REF-001: PokeMMO feature-analysis research](https://github.com/MrLluminati/PokeNavis/issues/6) is **Done**. [PR #7](https://github.com/MrLluminati/PokeNavis/pull/7) merged on 2026-11-04; the [report](research/pokemmo-feature-analysis.md) separates local metadata and published support evidence from engineering proposals.
+- No direct manual PokeMMO gameplay was analyzed. Follow the [Reference Research Protocol](REFERENCE-RESEARCH.md) for any later observations. The research does not authorize PN-004 implementation.
 
 ## What is currently in progress?
 
 - No coding task is presently In progress.
-- PN-004's minimal battle-state design is the next planning task; implementation is not yet authorized.
+- PN-004's [draft contract](PN-004-SPEC-DRAFT.md) and [design review Issue #8](https://github.com/MrLluminati/PokeNavis/issues/8) are available for approval. Implementation is not yet authorized.
 
 ## Blockers / open decisions
 
@@ -52,9 +52,9 @@
 
 ## What is next?
 
-1. Review [Reference Research Protocol](REFERENCE-RESEARCH.md); optionally collect comparative observations of gameplay without processing ROMs or client binaries.
-2. Finalize a small independent battle state, action and event model for PN-004 and choose placeholder rules.
-3. Request explicit owner approval before assigning Codex implementation; PN-005 and later remain Backlog.
+1. Review [PN-004 draft](PN-004-SPEC-DRAFT.md) and [Issue #8](https://github.com/MrLluminati/PokeNavis/issues/8) for a minimal battle state/action/event contract.
+2. Decide only the battle-mode/action-set/schema questions needed for PN-004; defer detailed formulas and other mechanics to later work.
+3. Record owner-approved decisions before Codex implements PN-004. PN-005 and later remain Backlog.
 
 ## For someone joining today
 
