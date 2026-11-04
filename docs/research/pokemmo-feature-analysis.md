@@ -1,6 +1,6 @@
 # REF-001 — PokeMMO reference research for independent PokeNavis design
 
-**Status:** [PR #7](https://github.com/MrLluminati/PokeNavis/pull/7) in review, 2026-11-04. **Task:** [Issue #6](https://github.com/MrLluminati/PokeNavis/issues/6). **Authority:** [reference protocol](../REFERENCE-RESEARCH.md), [decisions](../DECISIONS.md), and [architecture](../ARCHITECTURE.md). This report proposes designs; it approves no gameplay rule and implements no feature.
+**Status:** **REF-001 Done** — [PR #7](https://github.com/MrLluminati/PokeNavis/pull/7) merged 2026-11-04. **Task:** [Issue #6](https://github.com/MrLluminati/PokeNavis/issues/6). **Authority:** [reference protocol](../REFERENCE-RESEARCH.md), [decisions](../DECISIONS.md), and [architecture](../ARCHITECTURE.md). This report proposes designs; it approves no gameplay rule and implements no feature.
 
 ## 1. Scope, provenance, and evidence standard
 
