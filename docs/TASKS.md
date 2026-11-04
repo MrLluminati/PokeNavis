@@ -16,7 +16,7 @@ A proposed task is not authorization to implement undefined product decisions. C
 | --- | --- | --- | --- | --- | --- |
 | PN-001 | Bootstrap runnable Godot client project | P0 | **Done** | Merged [PR #1](https://github.com/MrLluminati/PokeNavis/pull/1) on 2026-11-04 | None |
 | PN-002 | [First 2D test world, movement and collision](PN-002-SPEC.md) | P0 | **Done** | [PR #3](https://github.com/MrLluminati/PokeNavis/pull/3) merged 2026-11-04 | None |
-| PN-003 | [NPC interaction and dialogue](PN-003-SPEC.md) | P0 | **In review** | Project owner reviews [PR #5](https://github.com/MrLluminati/PokeNavis/pull/5); [Issue #4](https://github.com/MrLluminati/PokeNavis/issues/4) | Owner review and merge |
+| PN-003 | [NPC interaction and dialogue](PN-003-SPEC.md) | P0 | **Done** | [PR #5](https://github.com/MrLluminati/PokeNavis/pull/5) merged 2026-11-04 | None |
 | PN-004 | Pure battle state/action/event schema | P0 | Backlog | ChatGPT specification + owner approval; Codex implementation | Battle rule scope |
 | PN-005 | Deterministic battle core with tests | P0 | Backlog | Codex | PN-004 |
 | PN-006 | Battle scene and engine adapter | P1 | Backlog | Codex | PN-001, PN-005 |
@@ -25,9 +25,13 @@ A proposed task is not authorization to implement undefined product decisions. C
 | PN-009 | Local versioned save/load | P1 | Backlog | Codex | PN-008 |
 | PN-010 | Automated checks/CI for runnable components | P1 | Backlog | Codex | PN-001 and/or PN-005 |
 
-The sequence above is the approved **Phase 1 offline vertical slice** backlog. PN-001 and PN-002 are Done on main; PN-003 is implemented on a feature branch and awaiting review. Later tasks remain Backlog until specified and approved.
+The sequence above is the approved **Phase 1 offline vertical slice** backlog. PN-001, PN-002 and PN-003 are Done on main. PN-004 remains Backlog pending a minimal battle-rules scope and owner approval; subsequent tasks are not started.
 
-## PN-003 verification handoff — In review
+## Current next action — PN-004 design, not implementation
+
+Define a minimal deterministic battle state/action/event schema and original placeholder combat rules, get owner approval, then create a scoped Codex task. Comparative research may use **observed gameplay**, authorized screenshots and notes, not PokeMMO client or ROM reverse engineering. See [Reference Research Protocol](REFERENCE-RESEARCH.md). PN-004 stays Backlog until specification and required rules are approved.
+
+## Completed handoff: PN-003 — merged PR #5
 
 **Specification:** [PN-003-SPEC.md](PN-003-SPEC.md) · **Issue:** [#4](https://github.com/MrLluminati/PokeNavis/issues/4) · **PR:** [#5](https://github.com/MrLluminati/PokeNavis/pull/5) · **Branch:** `feature/PN-003-npc-dialogue`, created from latest `main`.
 
@@ -35,7 +39,7 @@ The sequence above is the approved **Phase 1 offline vertical slice** backlog. P
 
 **Verification (2026-11-04):** Official Godot 4.7.2 stable standard on Windows x86_64. Headless import and 30-frame startup exited 0. The existing PN-002 suite passed all 32 checks, and the new NPC dialogue suite passed 33 checks: range/line of sight, three lines, key debounce, movement lock, cancel after moving out of range, collision, round-trip transitions and scene cleanup. Editor F5 showed Village and the NPC with zero errors/warnings. The graphical capture command exited 0 and produced inspected [prompt](screenshots/pn-003-approach-prompt.png) and [dialogue](screenshots/pn-003-dialogue-panel.png) frames. At the time of Codex testing, a continuous keyboard conversation was not separately recorded; test input was driven by Godot events. **Owner follow-up (2026-11-04): manual NPC interaction test passed, as reported by the project owner.** See [client README](../client/README.md) for original commands and the follow-up verification distinction.
 
-**Current state:** In review, not Done. Project owner reviews and merges if accepted. PN-004 remains Backlog.
+**Completion:** [PR #5](https://github.com/MrLluminati/PokeNavis/pull/5) merged into main 2026-11-04 after owner-reported manual NPC interaction passed. PN-004 remains Backlog until the owner approves its battle-schema scope.
 
 ## Completed handoff: PN-002 — merged PR #3
 
@@ -73,10 +77,10 @@ The sequence above is the approved **Phase 1 offline vertical slice** backlog. P
 - Two original placeholder zones, WASD/arrow movement, collisions, Camera2D, and safe two-way map transitions.
 - **Result:** [PR #3 merged](https://github.com/MrLluminati/PokeNavis/pull/3); first walkable prototype is in main.
 
-**PN-003 — NPC interaction (In review)**
+**PN-003 — NPC interaction (Done)**
 - [Full specification](PN-003-SPEC.md) and [GitHub Issue #4](https://github.com/MrLluminati/PokeNavis/issues/4).
 - Reusable NPC and data-driven dialogue, proximity prompt, movement lock and input handling.
-- **Next:** Project owner reviews [PR #5](https://github.com/MrLluminati/PokeNavis/pull/5) and merges if accepted.
+- **Result:** [PR #5 merged](https://github.com/MrLluminati/PokeNavis/pull/5); NPC interaction and dialogue are in main.
 
 **PN-004 — Battle contract**
 - Typed combatant/move/action/state/event definitions; turn-resolution ordering documented.
