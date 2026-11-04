@@ -14,7 +14,7 @@ A proposed task is not authorization to implement undefined product decisions. C
 
 | ID | Task | Priority | Status | Owner / next actor | Dependencies |
 | --- | --- | --- | --- | --- | --- |
-| PN-001 | Bootstrap runnable Godot client project | P0 | **Blocked** | Project owner to approve engine version and scripting language; then Codex | Client tech decision |
+| PN-001 | Bootstrap runnable Godot client project | P0 | **In progress** | Codex/local tester: smoke test [PR #1](https://github.com/MrLluminati/PokeNavis/pull/1), owner review | Actual runtime test and final PR review |
 | PN-002 | Tilemap test zone, movement and collision | P0 | Backlog | Codex after PN-001 | PN-001 |
 | PN-003 | NPC interaction and minimal dialogue | P0 | Backlog | Codex after PN-002 | PN-002 |
 | PN-004 | Pure battle state/action/event schema | P0 | Backlog | ChatGPT specification + owner approval; Codex implementation | Battle rule scope |
@@ -27,13 +27,13 @@ A proposed task is not authorization to implement undefined product decisions. C
 
 These are **proposed sequence tasks**, not evidence that implementation has begun. The objective is Phase 1 offline vertical slice, not full MMORPG.
 
-## First Codex implementation handoff: PN-001 (pending owner approval)
+## Codex verification handoff: PN-001 (draft PR #1)
 
 **Objective:** Create the smallest reproducible, runnable Godot 4.x 2D project in `client/` with a minimal test scene. Do not implement player movement, battles, networking, Pokémon content or an asset pipeline yet.
 
-**Preconditions to unblock:** owner confirms Godot version and GDScript vs C#.
+**Confirmed decision:** Godot 4.7.2 stable (standard) and GDScript, see D-016. **Draft PR:** https://github.com/MrLluminati/PokeNavis/pull/1 . Runtime verification remains incomplete.
 
-**Allowed changes:** `client/` project and source scenes, required config files, minimal `client/README.md`, targeted root docs only as needed.
+**Branch:** `feature/PN-001-godot-bootstrap`. **Allowed changes:** `client/` source scenes/config, `client/README.md`, and targeted docs or verification tests only.
 
 **Acceptance criteria**
 - `client/` contains a valid Godot project that opens in the chosen supported version.
@@ -45,7 +45,7 @@ These are **proposed sequence tasks**, not evidence that implementation has begu
 - `docs/TASKS.md` and `docs/STATUS.md` reflect actual progress and contain PR/commit links.
 
 **Codex-ready request once unblocked:**
-> Read AGENTS.md and docs/TASKS.md. Implement PN-001 only in a branch named codex/PN-001-godot-bootstrap. Use the approved Godot version and scripting language. Add a minimal launchable 2D project and documentation. Run available smoke checks; report exact commands and outcomes, and open a PR. Do not implement movement, Pokémon assets, multiplayer or battle mechanics. Update the status/task documentation in the PR.
+> Read AGENTS.md, client/README.md and docs/TASKS.md. Continue existing draft **PR #1**, branch `feature/PN-001-godot-bootstrap`, using **Godot 4.7.2 stable, standard edition**. Run `godot --headless --path client --import` and `godot --headless --path client --quit-after 5`; run the graphical F5 editor smoke test where possible. Fix actual errors in this PR and report exact commands, outputs and remaining limitations. Do not add movement, Pokémon content, multiplayer or battle logic. Update status/task records in the PR. Request project-owner review after tests pass.
 
 ## Follow-up tasks (outline)
 
